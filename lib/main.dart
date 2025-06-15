@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:streambuilderfaqih/stream.dart';
 import 'dart:async';
+import 'package:streambuilderfaqih/random_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,16 +10,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'StreamBuilder Faqih',
+      debugShowCheckedModeBanner: false, // Menghilangkan banner debug
+      title: 'BLoC Random Number App', // Judul aplikasi
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal), // Skema warna aplikasi
+        useMaterial3: true, // Menggunakan Material 3 design
       ),
-      home: const StreamHomePage(),
+      home: const RandomScreen(), // Mengatur RandomScreen sebagai halaman utama
     );
   }
 }
